@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Collection</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- bootstrap 4.0 css-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<!-- tether -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<!-- bootstrap 4.0 js -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<!-- for the stars -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+	<div class="jumbotron jumpotron-fluid">
+		<br>
+		<br>
+		<br>
+		<br>
+		<h1 class="display-3 titleHeader mt-5 pl-4 pb-3 bg-info">My collection</h1>
+	</div>
+	
+	<br>
+	<hr class="col-10 m-auto">
+	<br>
+
+	<!-- Dropdown-toggle Button => form for additional items-->
+	<button id="toggleButton" class="btn btn-primary d-block mb-4 dropdown-toggle col-10 offset-1 col-md-3" data-toggle="collapse" data-target="#collapse-btn-1">Add a new Item</button>
+
+	<div class="container collapse mb-5" id="collapse-btn-1">
+		<div class="card p-3">
+			<div class="card-body">
+
+				<h1>Add a new Item</h1>
+				<form id="title-form">
+					<div class = "form-group">
+						<label for="title"><strong>Title</strong></label>
+						<input type="text" id="title" class="form-control form-control-sm" placeholder="Enter Title">
+					</div>
+					
+					<div class = "form-group">
+						<label for="author"><strong>Author</strong></label>
+						<input type="text" id="author" class="form-control form-control-sm" placeholder="Enter Author">
+					</div>
+					<div class="form-group">
+						<legend>Type:</legend>
+						<select id="selectType"> 
+							<option value="disabled" selected disabled>Select Type!</option>
+							<option value="CD">CD</option> 
+							<option value="Book">Book</option>
+							<option value="DVD">DVD</option>
+							<option value="Comic">Comic</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<legend>Genres:</legend>
+						<select id="selectGenre">
+							<option value="disabled" selected disabled>Select Genre!</option> 
+							<option value="Rock">Rock</option> 
+							<option value="Pop">Pop</option>
+							<option value="SF">SF</option>
+							<option value="Crimi">Crimi</option>
+							<option value="Horror">Horror</option>
+							<option value="Comedy">Comedy</option>
+							<option value="Drama">Drama</option>
+							<option value="Documentary">Documentary</option>
+							<option value="Children">Children</option>
+						</select>
+					</div>
+
+					<div class = "form-group">
+						<label for="publisher"><strong>Publisher</strong></label>
+						<input type="text" id="publisher" class="form-control form-control-sm" placeholder="Enter Publisher">
+					</div>
+
+					<div class = "form-group">
+						<label for="image"><strong>Image</strong></label>
+						<input type="text" id="image" class="form-control form-control-sm" placeholder="Enter Img url">
+					</div>
+
+					<div class = "form-group">
+						<label for="rating"><strong>Rating (1-lowest, 5-highest)</strong></label>
+						<input type="number" id="rating" class="form-control form-control-sm" placeholder="1-5">
+					</div>
+
+					<div class = "form-group">
+						<input type="submit" value="Submit" class="btn btn-primary btn-lg">
+					</div>
+
+				</form>
+				
+			</div>
+		</div>
+	</div>
+	
+	<!-- JS creates content for this div -->
+	<div class="row" id="mainContent">
+	</div>
+
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
